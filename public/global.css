@@ -1,0 +1,108 @@
+:root {
+  --font-color: #d6d6d6;
+  --font-color-dark: #16191b;
+
+  --font-link: #6f6f6f;
+  --font-link-dark: #b9b9b9;
+
+  --font-link-hover: #a2a2a2;
+  --font-link-hover-dark: #16191b;
+
+  --background-color: #16191b;
+  --background-color-light: #e7e7e7;
+
+  --testborder: 1px solid red;
+}
+.dark {
+  --bg: var(--background-color);
+  --font: var(--font-color);
+  --link: var(--font-link);
+  --link-hover: var(--font-link-hover);
+  --txt-size: 300;
+}
+.light {
+  --bg: var(--background-color-light);
+  --font: var(--font-color-dark);
+  --link: var(--font-link-dark);
+  --link-hover: var(--font-link-hover-dark);
+  --txt-size: 400;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--font);
+  letter-spacing: 0.5px;
+  font-weight: var(--txt-size);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.nav-item {
+  margin-right: 10px;
+  color: var(--font);
+}
+
+.nav-item:hover {
+  color: var(--link-hover);
+}
+
+.nav-item a {
+  color: var(--font);
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  flex-direction: row;
+  align-items: flex-start;
+  border-radius: 2px;
+  max-width: fit-content;
+  min-width: none;
+  margin-bottom: 20px;
+  padding: 2px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  top: 24px;
+  left: 0;
+  background-color: var(--font);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.card:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.proj-head {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.description {
+  font-size: 14px;
+}

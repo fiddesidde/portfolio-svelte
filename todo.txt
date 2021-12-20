@@ -1,0 +1,1 @@
+Refactor content into card (from "Take a closer look...)
