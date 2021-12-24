@@ -4,6 +4,7 @@
   import TypeTextEffect from "./TypeTextEffect.svelte";
   import Navbar from "./Navbar.svelte";
   import { projects } from "./content";
+  import NewCard from "./NewCard.svelte";
 </script>
 
 <main>
@@ -26,6 +27,8 @@
         {#each projects as project, i}
           <BigCard id={i} {project} />
         {/each}
+        <!-- <NewCard project={projects.at(0)} /> -->
+        <NewCard />
         <SmallProjects />
       </section>
     </div>
