@@ -105,4 +105,14 @@ h1 {
 
 .description {
   font-size: 14px;
+  cursor: default;
+}
+
+.description > p > a {
+  color: var(--font);
+  text-decoration: none;
+}
+
+.description > p > a:hover {
+  text-decoration: underline;
 }

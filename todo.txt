@@ -1,1 +1,1 @@
-Implement card with prop from .md-file, gh/live/title as meta?
+fix embedded link to have target=_blank and rel=noopener
