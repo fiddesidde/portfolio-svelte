@@ -1,5 +1,5 @@
 ---
-title: Monly
+title: Members Only
 gh: https://github.com/fiddesidde/odin-members-only
 live: https://fremworks.com/monly/
 ---
