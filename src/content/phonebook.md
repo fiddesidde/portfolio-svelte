@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: Phonebook
 gh: https://github.com/fiddesidde/fso3
 live: https://phonebook.fremworks.com
 ---

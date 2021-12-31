@@ -1,5 +1,5 @@
 <script>
-  import { smallProjects } from "./content";
+  import { smallProjects } from "./content/content.js";
 
   let showInfo = false;
 

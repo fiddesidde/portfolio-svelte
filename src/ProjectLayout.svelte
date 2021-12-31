@@ -1,7 +1,3 @@
-<!-- <script context="module">
-  import { embeddedLink } from "./components/EmbeddedLink.svelte";
-  export { embeddedLink };
-</script> -->
 <script>
   export let title;
   export let gh;
@@ -12,18 +8,6 @@
   function toggleShow() {
     showInfo = !showInfo;
   }
-
-  function addBlank() {
-    let i_will_target_self = document.querySelectorAll("a");
-    console.log("i_will_target_self:", i_will_target_self);
-
-    i_will_target_self.forEach((element) => {
-      element.target = "_blank";
-      element.rel = "noopener";
-    });
-  }
-
-  addBlank();
 </script>
 
 <div class="card">
@@ -46,8 +30,6 @@
     <h2 class="proj-head" on:click={() => toggleShow()}>
       {title}...<span class="show-more">show more</span>
     </h2>
-
-    <!-- <div class="description">More...</div> -->
   {/if}
 </div>
 
