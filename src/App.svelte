@@ -1,6 +1,6 @@
 <script>
   import SmallProjects from "./SmallProjects.svelte";
-  import TypeTextEffect from "./TypeTextEffect.svelte";
+  import TypeTextEffect from "./components/TypeTextEffect.svelte";
   import Navbar from "./Navbar.svelte";
   import Monly from "./content/monly.svx";
   import Blog from "./content/blog.md";
