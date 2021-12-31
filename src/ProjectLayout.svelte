@@ -1,3 +1,7 @@
+<!-- <script context="module">
+  import { embeddedLink } from "./components/EmbeddedLink.svelte";
+  export { embeddedLink };
+</script> -->
 <script>
   export let title;
   export let gh;

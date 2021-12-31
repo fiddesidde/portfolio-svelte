@@ -49,7 +49,7 @@ export default {
       },
       extensions: [".svelte", ".svx", ".md"],
       preprocess: mdsvex({
-        extensions: [".md"],
+        extensions: [".md", ".svx"],
         layout: "./src/ProjectLayout.svelte",
       }),
     }),

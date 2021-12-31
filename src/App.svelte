@@ -4,7 +4,7 @@
   import TypeTextEffect from "./TypeTextEffect.svelte";
   import Navbar from "./Navbar.svelte";
   import { projects } from "./content";
-  import Md from "./content/monly.md";
+  import Md from "./content/monly.svx";
 </script>
 
 <main>

@@ -4,7 +4,11 @@ gh: https://github.com/fiddesidde/odin-members-only
 live: https://fremworks.com/monly/
 ---
 
-This is a SSR app I made during the course of ["The Odin Project"](https://www.theodinproject.com/home) primarily to learn authentication and authorization.The app is a messaging
+<script>
+    import EmbeddedLink from "../components/EmbeddedLink.svelte"
+</script>
+
+This is a SSR app I made during the course of <EmbeddedLink url="https://www.theodinproject.com/home" text='"The Odin Project"'/> primarily to learn authentication and authorization.The app is a messaging
 board where, depending on the users "tier", different information is available
 to view and actions to take.
 
