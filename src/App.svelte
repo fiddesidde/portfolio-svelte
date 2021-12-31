@@ -1,12 +1,12 @@
 <script>
-  // import BigCard from "./BigCard.svelte";
   import SmallProjects from "./SmallProjects.svelte";
   import TypeTextEffect from "./TypeTextEffect.svelte";
   import Navbar from "./Navbar.svelte";
-  // import { projects } from "./content";
   import Monly from "./content/monly.svx";
   import Blog from "./content/blog.md";
   import PB from "./content/phonebook.md";
+
+  let projects = [Monly, Blog, PB];
 </script>
 
 <main>
@@ -17,21 +17,18 @@
         <h1><TypeTextEffect text={"Portfolio, Fredrik Mellberg"} /></h1>
       </header>
       <section class="section">
-        Hi! Welcome to my portfolio site. Check out my projects below.<br />I'm
-        currently employed as a HVAC-engineer looking to make a career change
-        into web development, primarily in back-end development.<br />To hire
-        me, contact me here:
+        Hi! Welcome to my portfolio site. Check out my projects below.<br />
+        I'm currently employed as a HVAC-engineer looking to make a career change
+        into web development, primarily in back-end development.<br />
+        To hire me, contact me here:
         <span class="nav-item"
           ><a href="mailto:fredrik@fremworks.com">fredrik@fremworks.com</a
           ></span>
       </section>
       <section id="card-container">
-        <!-- {#each projects as project, i}
-          <BigCard id={i} {project} />
-        {/each} -->
-        <Monly />
-        <Blog />
-        <PB />
+        {#each projects as Project}
+          <Project />
+        {/each}
         <SmallProjects />
       </section>
     </div>
