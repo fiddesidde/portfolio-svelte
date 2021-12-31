@@ -1,10 +1,12 @@
 <script>
-  import BigCard from "./BigCard.svelte";
+  // import BigCard from "./BigCard.svelte";
   import SmallProjects from "./SmallProjects.svelte";
   import TypeTextEffect from "./TypeTextEffect.svelte";
   import Navbar from "./Navbar.svelte";
-  import { projects } from "./content";
-  import Md from "./content/monly.svx";
+  // import { projects } from "./content";
+  import Monly from "./content/monly.svx";
+  import Blog from "./content/blog.md";
+  import PB from "./content/phonebook.md";
 </script>
 
 <main>
@@ -24,10 +26,12 @@
           ></span>
       </section>
       <section id="card-container">
-        {#each projects as project, i}
+        <!-- {#each projects as project, i}
           <BigCard id={i} {project} />
-        {/each}
-        <Md />
+        {/each} -->
+        <Monly />
+        <Blog />
+        <PB />
         <SmallProjects />
       </section>
     </div>
