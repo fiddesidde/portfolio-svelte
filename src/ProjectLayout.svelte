@@ -1,4 +1,6 @@
 <script>
+  import { slide } from "svelte/transition";
+
   export let title;
   export let gh;
   export let live;
@@ -12,8 +14,15 @@
 
 <div class="card">
   {#if showInfo}
-    <h2 class="proj-head" on:click={() => toggleShow()}>{title}</h2>
-    <div class="description full-project-div" style="display: block;">
+    <h2 class="proj-head" on:click={() => toggleShow()}>
+      {title}
+    </h2>
+    <div
+      class="description full-project-div"
+      style="display: block;"
+      transition:slide={{
+        duration: 300,
+      }}>
       <slot />
       <div class="links">
         Take a closer look:
@@ -27,7 +36,10 @@
       </div>
     </div>
   {:else}
-    <h2 class="proj-head" on:click={() => toggleShow()}>
+    <h2
+      class="proj-head"
+      on:click={() => toggleShow()}
+      in:slide={{ delay: 301, duration: 0 }}>
       {title}...<span class="show-more">show more</span>
     </h2>
   {/if}
