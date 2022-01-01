@@ -15,6 +15,7 @@
 <div class="card">
   {#if showInfo}
     <h2 class="proj-head" on:click={() => toggleShow()}>
+      <img src="/arrow-down-solid.svg" alt="" class="arrow" />
       {title}
     </h2>
     <div
@@ -39,14 +40,16 @@
     <h2
       class="proj-head"
       on:click={() => toggleShow()}
-      in:slide={{ delay: 301, duration: 0 }}>
-      {title}...<span class="show-more">show more</span>
+      in:slide={{ delay: 300, duration: 0 }}>
+      <img src="/arrow-right-solid.svg" alt="" class="arrow" />
+      {title}
     </h2>
   {/if}
 </div>
 
 <style>
-  .show-more {
-    font-size: 14px;
+  .arrow {
+    display: inline-block;
+    width: 12px;
   }
 </style>
