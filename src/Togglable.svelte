@@ -8,17 +8,17 @@
 
   let arrowUrl = rightArrowUrl;
 
-  let showInfo = false;
+  let isShowingInfo = false;
 
   function toggleShow() {
-    showInfo = !showInfo;
+    isShowingInfo = !isShowingInfo;
     arrowUrl = arrowUrl === downArrowUrl ? rightArrowUrl : downArrowUrl;
   }
 </script>
 
 <div class="card">
   <h2 class="proj-head" on:click={() => toggleShow()}>
-    {#if showInfo}
+    {#if isShowingInfo}
       <svg
         aria-hidden="true"
         focusable="false"
@@ -39,7 +39,7 @@
     {/if}
     {title}
   </h2>
-  {#if showInfo}
+  {#if isShowingInfo}
     <div
       class="description full-project-div"
       transition:slide={{
