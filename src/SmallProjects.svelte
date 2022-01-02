@@ -2,22 +2,27 @@
   import { smallProjects } from "./content/content.js";
   import { slide } from "svelte/transition";
 
+  const rightArrowUrl = "/arrow-right-solid.svg";
+  const downArrowUrl = "/arrow-down-solid.svg";
+
+  let arrowUrl = rightArrowUrl;
+
   let showInfo = false;
 
   function toggleShow() {
     showInfo = !showInfo;
+    arrowUrl = arrowUrl === downArrowUrl ? rightArrowUrl : downArrowUrl;
   }
 </script>
 
 <div class="card">
+  <h2 class="proj-head" on:click={() => toggleShow()}>
+    <img src={arrowUrl} alt="" class="arrow" />
+    Small JS projects
+  </h2>
   {#if showInfo}
-    <h2 class="proj-head" on:click={() => toggleShow()}>
-      <img src="/arrow-down-solid.svg" alt="" class="arrow" />
-      Small JS projects
-    </h2>
     <div
       class="description full-project-div"
-      style="display: block;"
       transition:slide={{
         duration: 300,
       }}>
@@ -34,20 +39,11 @@
         </div>
       {/each}
     </div>
-  {:else}
-    <h2
-      class="proj-head"
-      on:click={() => toggleShow()}
-      in:slide={{ delay: 300, duration: 0 }}>
-      <img src="/arrow-right-solid.svg" alt="" class="arrow" />
-      Small JS projects
-    </h2>
   {/if}
 </div>
 
 <style>
   .arrow {
-    display: inline-block;
     width: 12px;
   }
 
