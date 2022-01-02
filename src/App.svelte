@@ -7,6 +7,8 @@
   import PB from "./content/phonebook.md";
 
   let projects = [Monly, Blog, PB];
+
+  let mainHeading = "Portfolio, Fredrik Mellberg";
 </script>
 
 <main>
@@ -14,7 +16,7 @@
     <Navbar />
     <div id="main">
       <header class="header">
-        <h1><TypeTextEffect text={"Portfolio, Fredrik Mellberg"} /></h1>
+        <h1><TypeTextEffect text={mainHeading} /></h1>
       </header>
       <section class="section">
         Hi! Welcome to my portfolio site. Check out my projects below.<br />
