@@ -1,12 +1,17 @@
 <script>
   import SmallProjects from "./SmallProjects.svelte";
   import TypeTextEffect from "./components/TypeTextEffect.svelte";
+  import Togglable from "./Togglable.svelte";
   import Navbar from "./Navbar.svelte";
-  import Monly from "./content/monly.svx";
-  import Blog from "./content/blog.md";
-  import PB from "./content/phonebook.md";
+  import { default as monly, metadata as monlyMeta } from "./content/monly.svx";
+  import { default as blog, metadata as blogMeta } from "./content/blog.md";
+  import { default as pb, metadata as pbMeta } from "./content/phonebook.md";
 
-  let projects = [Monly, Blog, PB];
+  let projects = [
+    { content: monly, title: monlyMeta.title },
+    { content: blog, title: blogMeta.title },
+    { content: pb, title: pbMeta.title },
+  ];
 
   let mainHeading = "Portfolio, Fredrik Mellberg";
 </script>
@@ -29,9 +34,11 @@
       </section>
       <section id="card-container">
         {#each projects as Project}
-          <Project />
+          <Togglable title={Project.title}><Project.content /></Togglable>
         {/each}
-        <SmallProjects />
+        <Togglable title="Small JS projects">
+          <SmallProjects />
+        </Togglable>
       </section>
     </div>
   </div>
