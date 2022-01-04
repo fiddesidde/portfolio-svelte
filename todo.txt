@@ -1,5 +1,0 @@
-Create dropdown arrow
-
-Title underline on mobile...
-
-Refactor to combine ProjectLayout and SmallProjects
