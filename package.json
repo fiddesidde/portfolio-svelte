@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "copy": "sudo cp -r ~/repos/portfolio-svelte/public/* /var/www/html/portfolio/",
-    "emptywww": "sudo rm -rf /var/www/portfolio/*",
+    "emptywww": "sudo rm -rf /var/www/html/portfolio/*",
     "build": "rollup -c",
     "publish": "npm run build && npm run emptywww && npm run copy",
     "dev": "rollup -c -w",
